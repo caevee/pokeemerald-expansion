@@ -1061,3 +1061,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/text/birch_speech.inc"
 
 	.include "data/maps/LittlerootTown_NewLab/scripts.inc"
+
+	.include "data/maps/TournamentArea/scripts.inc"
