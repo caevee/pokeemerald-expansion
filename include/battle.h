@@ -148,6 +148,7 @@ struct ProtectStruct
     u16 quickDraw:1;
     u16 beakBlastCharge:1;
     u16 quash:1;
+    u16 silkTrapped:1;
     u32 physicalDmg;
     u32 specialDmg;
     u8 physicalBattlerId;
@@ -194,6 +195,7 @@ struct SpecialStatus
     // End of byte
     u8 weatherAbilityDone:1;
     u8 terrainAbilityDone:1;
+    u8 emergencyExited:1;
 };
 
 struct SideTimer
@@ -702,7 +704,8 @@ struct BattleStruct
                                         || gProtectStructs[battlerId].spikyShielded                                    \
                                         || gProtectStructs[battlerId].kingsShielded                                    \
                                         || gProtectStructs[battlerId].banefulBunkered                                  \
-                                        || gProtectStructs[battlerId].obstructed)                                      \
+                                        || gProtectStructs[battlerId].obstructed                                       \
+                                        || gProtectStructs[battlerId].silkTrapped)
 
 #define GET_STAT_BUFF_ID(n)((n & 7))              // first three bits 0x1, 0x2, 0x4
 #define GET_STAT_BUFF_VALUE_WITH_SIGN(n)((n & 0xF8))
